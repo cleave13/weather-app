@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0n shrink-to-fit=no">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row-fluid text-center mb-3 p-3" id="header-main">
@@ -18,17 +21,20 @@
         <div class="row">
             <div class="col-3">
                 <div>
-                    <header>
+                    <header class="mt-1 mb-4">
                         <h2>Search for a City:</h2>
                     </header>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Denver" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <input type="text" class="form-control" id="search-bar" placeholder="Denver" aria-label="Recipient's username" aria-describedby="button-addon2">
                 </div>
                 <div class="input-group-append">
                     <button class="btn btn-primary btn-block" type="button" id="search">Search</button>
                 </div>
                 <hr>
+                <div id="city-buttons">
+                <!-- This section populated by JavaScript -->
+                </div>
             </div>
             <div class="col-sm">
                 <div class="row border p-3 m-0">
@@ -49,61 +55,63 @@
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                              <h5 class="card-title">3/31/2021</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                              <p class="card-text">Temp: 73.72* F</p>
-                              <p class="card-text">Wind: 9.53 MPH</p>
-                              <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title">3/31/2021</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
+                                <p class="card-text">Temp: 73.72* F</p>
+                                <p class="card-text">Wind: 9.53 MPH</p>
+                                <p class="card-text">Humidity: 66%</p>
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                              <h5 class="card-title">3/31/2021</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                              <p class="card-text">Temp: 73.72* F</p>
-                              <p class="card-text">Wind: 9.53 MPH</p>
-                              <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title">3/31/2021</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
+                                <p class="card-text">Temp: 73.72* F</p>
+                                <p class="card-text">Wind: 9.53 MPH</p>
+                                <p class="card-text">Humidity: 66%</p>
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                              <h5 class="card-title">3/31/2021</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                              <p class="card-text">Temp: 73.72* F</p>
-                              <p class="card-text">Wind: 9.53 MPH</p>
-                              <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title">3/31/2021</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
+                                <p class="card-text">Temp: 73.72* F</p>
+                                <p class="card-text">Wind: 9.53 MPH</p>
+                                <p class="card-text">Humidity: 66%</p>
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                              <h5 class="card-title">3/31/2021</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                              <p class="card-text">Temp: 73.72* F</p>
-                              <p class="card-text">Wind: 9.53 MPH</p>
-                              <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title">3/31/2021</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
+                                <p class="card-text">Temp: 73.72* F</p>
+                                <p class="card-text">Wind: 9.53 MPH</p>
+                                <p class="card-text">Humidity: 66%</p>
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                              <h5 class="card-title">3/31/2021</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                              <p class="card-text">Temp: 73.72* F</p>
-                              <p class="card-text">Wind: 9.53 MPH</p>
-                              <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title">3/31/2021</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
+                                <p class="card-text">Temp: 73.72* F</p>
+                                <p class="card-text">Wind: 9.53 MPH</p>
+                                <p class="card-text">Humidity: 66%</p>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
