@@ -39,7 +39,7 @@ function addCity(city) {
     if (JSON.stringify(savedCities).includes(city)) {
         return;
     }
-    
+
     const cityButtonEl = document.createElement('button');
     savedCities.push(city);
     cityButtonEl.setAttribute('class', 'btn');
@@ -60,7 +60,7 @@ function setCityNameFromButton(event) {
 
 //Sends callout to the geolocation API passing in the city name. Will alert the user that the selected city was not found if callout results in an error.
 function getGeolocation(requestedCity) {
-    const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${requestedCity}&limit=1&appid=71efd4d442f298b303ca2c7c46cd4032`
+    const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${requestedCity}&limit=1&appid=71efd4d442f298b303ca2c7c46cd4032`
 
     fetch(geoUrl)
         .then(function (geoResponse) {
@@ -77,7 +77,7 @@ function getGeolocation(requestedCity) {
                 alert('The city name you entered could not be found. Please try a different name.');
                 return;
             }
-            
+
         });
 }
 
@@ -102,7 +102,7 @@ function getWeather(lat, long) {
                 alert('We could not find weather data for that location. Please try again later.');
                 return;
             }
-            
+
         });
 }
 
@@ -110,10 +110,10 @@ function getWeather(lat, long) {
 function displayCurrent(cityWeather) {
     today = new Date();
     const weatherIcon = document.createElement('img');
-    const iconUrl = 'http://openweathermap.org/img/wn/' + cityWeather.current.weather[0].icon + '@2x.png'
+    const iconUrl = 'https://openweathermap.org/img/wn/' + cityWeather.current.weather[0].icon + '@2x.png'
     weatherIcon.setAttribute('src', iconUrl);
-    
-    currentCityEl.textContent = `${cityName} (${today.getMonth()+1}/${today.getDate()}/${today.getFullYear()})`;
+
+    currentCityEl.textContent = `${cityName} (${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()})`;
     currentCityEl.appendChild(weatherIcon);
 
     currentTempEl.textContent = `${cityWeather.current.temp} ℉`;
@@ -129,7 +129,7 @@ function displayForecast(cityForecasts) {
         day.setDate(day.getDate() + i + 1);
         const cardBody = cardContainerEl.children[i].children[0].children[0];
         const forecastIcon = document.createElement('img');
-        const forecastIconUrl = 'http://openweathermap.org/img/wn/' + cityForecasts.daily[i].weather[0].icon + '.png';
+        const forecastIconUrl = 'https://openweathermap.org/img/wn/' + cityForecasts.daily[i].weather[0].icon + '.png';
         console.log(forecastIcon);
         forecastIcon.setAttribute('src', forecastIconUrl);
         const forecastTemp = cityForecasts.daily[i].temp.max;
@@ -137,9 +137,9 @@ function displayForecast(cityForecasts) {
         const forecastHum = cityForecasts.daily[i].humidity;
         const forecastUvi = cityForecasts.daily[i].uvi;
 
-        cardBody.children[0].textContent = `${day.getMonth()+1}/${day.getDate()}/${day.getFullYear()}`;
-        
-        cardBody.children[1].textContent = `Temp: ${forecastTemp} ℉` ;
+        cardBody.children[0].textContent = `${day.getMonth() + 1}/${day.getDate()}/${day.getFullYear()}`;
+
+        cardBody.children[1].textContent = `Temp: ${forecastTemp} ℉`;
         cardBody.children[1].appendChild(forecastIcon);
         cardBody.children[2].textContent = `Wind: ${forecastWind} MPH`;
         cardBody.children[3].textContent = `Humidity: ${forecastHum}%`;
@@ -154,7 +154,7 @@ function displayForecast(cityForecasts) {
             cardBody.children[4].setAttribute('class', 'uvi-high');
         }
     }
-    
+
 }
 
 //EVENT LISTENERS
