@@ -1,11 +1,44 @@
+/* Adds a horizontal separator below the search bar. */
+
 hr {
     border-top: 1px solid rgba(62, 62, 62, 0.351);
 }
 
+/* removes bootstrap spacing around the button element */
 .btn {
     margin: 0;
 }
 
+/* adjusts the background and text color of the cards  */
+.card {
+    background-color: rgb(47, 47, 96);
+    color: rgb(244, 244, 244);
+}
+
+/* sets a linear gradient for the main header */
 #header-main {
     background: linear-gradient(to right, white, #036bda);
+}
+
+.uvi-low, .uvi-mod, .uvi-high, .uvi-highest {
+    padding: 5px;
+    width: 70%
+}
+
+.uvi-low {
+    background-color: green;
+}
+
+.uvi-mod {
+    background-color: yellow;
+    color: rgb(36, 36, 36);
+}
+
+.uvi-high {
+    background-color: Orange;
+    color: rgb(36, 36, 36);
+}
+
+.uvi-highest {
+    background-color: red;
 }

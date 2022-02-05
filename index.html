@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Defines the meta information for the cards and links to external stylesheets including bootstrap CSS framework. -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,12 +14,14 @@
 
 <body>
     <div class="container-fluid">
+        <!-- sets main header properties -->
         <div class="row-fluid text-center mb-3 p-3" id="header-main">
             <header>
                 <h1>Weather Dashboard</h1>
             </header>
         </div>
         <div class="row">
+            <!-- defines a row for the left-hand column -->
             <div class="col-3">
                 <div>
                     <header class="mt-1 mb-4">
@@ -36,74 +39,76 @@
                 <!-- This section populated by JavaScript -->
                 </div>
             </div>
+            <!-- defines the right-hand column -->
             <div class="col-sm">
-                <div class="row border p-3 m-0">
+                <div class="row border border-2 p-2 m-0">
                     <header>
-                        <h2>Atlanta (3/30/2021) ☁️</h2>
-                        <p>Temp: 74.01*F</p>
-                        <p>Wind: 6.67 MPH</p>
-                        <p>Humidity 46%</p>
-                        <p>UV Index: <span>0.47</span></p>
+                        <h2> <span id="current-city"></span></h2>
+                        <p>Temp: <span id="current-temp"></span></p>
+                        <p>Wind: <span id="current-wind"></span> MPH</p>
+                        <p>Humidity: <span id="current-hum"></span></p>
+                        <p>UV Index: <span id="current-uvi"></span></p>
                     </header>
                 </div>
-                <div class="row mt-5 mb-3 ml-1">
+                <!-- defines inner row for the forecast cards -->
+                <div class="row mt-4 mb-2 ml-1">
                     <header>
                         <h3>5-Day Forecast</h3>
                     </header>
                 </div>
-                <div class="row d-flex justify-content-between m-1">
+                <div class="row d-flex justify-content-between m-1" id="card-container">
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                                <h5 class="card-title">3/31/2021</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                                <p class="card-text">Temp: 73.72* F</p>
-                                <p class="card-text">Wind: 9.53 MPH</p>
-                                <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title"></h5>
+                                <h6 class="card-subtitle mb-2"></h6>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </div>
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                                <h5 class="card-title">3/31/2021</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                                <p class="card-text">Temp: 73.72* F</p>
-                                <p class="card-text">Wind: 9.53 MPH</p>
-                                <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title"></h5>
+                                <h6 class="card-subtitle mb-2"></h6>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </div>
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                                <h5 class="card-title">3/31/2021</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                                <p class="card-text">Temp: 73.72* F</p>
-                                <p class="card-text">Wind: 9.53 MPH</p>
-                                <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title"></h5>
+                                <h6 class="card-subtitle mb-2"></h6>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </div>
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                                <h5 class="card-title">3/31/2021</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                                <p class="card-text">Temp: 73.72* F</p>
-                                <p class="card-text">Wind: 9.53 MPH</p>
-                                <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title"></h5>
+                                <h6 class="card-subtitle mb-2"></h6>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </div>
                     <div class="column" style="width: 18%">
                         <div class="card" style="width: 100%">
                             <div class="card-body">
-                                <h5 class="card-title">3/31/2021</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">🌥</h6>
-                                <p class="card-text">Temp: 73.72* F</p>
-                                <p class="card-text">Wind: 9.53 MPH</p>
-                                <p class="card-text">Humidity: 66%</p>
+                                <h5 class="card-title"></h5>
+                                <h6 class="card-subtitle mb-2"></h6>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </div>
@@ -111,6 +116,7 @@
             </div>
         </div>
     </div>
+    <!-- relative link to external javascript file -->
     <script src="./assets/js/main.js"></script>
 </body>
 
